@@ -1,6 +1,6 @@
 let jogadorO
 let jogadorX
-let vez = false
+var vez = false
 let tag0 = window.document.getElementById('tag0')
 let tag1 = window.document.getElementById('tag1')
 let tag2 = window.document.getElementById('tag2')
@@ -35,9 +35,9 @@ var vitoria = [
 function verificaVitoria(){
     for(var a=0; a<=8; a++){
         if(vitoria[a][0] == vitoria[a][1] && vitoria[a][0] == vitoria[a][2]){
-            let campeao = document.getElementById('campeao')
-            
-            
+            // let campeao = document.getElementById('campeao')
+            // campeao.innerHTML = 'campeao'
+            alert('campeao')
         } 
     }
 }
@@ -55,18 +55,21 @@ function adiciona_O_NoArray(n){
 
 
 function jogarTag0(){
-    
     if(tabela[0] == null){
         if(vez){
             tag0.innerHTML = 'X'
+            vez = false
        
         }else{
             let item = document.createElement('div')
             item.className = "circle"
             tag0.appendChild(item)
             tabela[0] = 'O'
+            vez = true   
+            console.log(vitoria)
             adiciona_O_NoArray(0)
-            verificaVitoria()       
+            //verificaVitoria()
+                
         }
     }else{
         alert('Posição Preenchida')
@@ -78,14 +81,17 @@ function jogarTag1(){
     if(tabela[1] == null){
         if(vez){
             tag1.innerHTML = 'X'
-          
+            vez = false
         }else{
             let item = document.createElement('div')
             item.className = "circle"
             tag1.appendChild(item)
             tabela[1] = 'O'
+            vez = true    
+            console.log(vitoria)
             adiciona_O_NoArray(1)
-            verificaVitoria()    
+            //verificaVitoria()
+            
         }
         
     }else{
@@ -97,15 +103,16 @@ function jogarTag2(){
     if(tabela[2] == null){
         if(vez){
             tag2.innerHTML = 'X'
-       
+            vez = false
         }else{
             let item = document.createElement('div')
             item.className = "circle"
             tag2.appendChild(item)
             tabela[2] = 'O'
+            vez = true
+            console.log(vitoria)
             adiciona_O_NoArray(2)
-            verificaVitoria()    
-       
+            //verificaVitoria()    
         }
         
     }else{
@@ -126,7 +133,7 @@ function jogarTag3(){
             vez = true
            
         }
-        verificaVitoria()
+        //verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
@@ -134,3 +141,105 @@ function jogarTag3(){
 
 }
 
+function jogarTag4(){
+    if(tabela[4] == null){
+        if(vez){
+            tag4.innerHTML = 'X'
+            vez = false
+        }else{
+            let item = document.createElement('div')
+            item.className = "circle"
+            tag4.appendChild(item)
+            tabela[4] = 'O'
+            vez = true
+           
+        }
+        //verificaVitoria()
+    }else{
+        alert('Posição Preenchida')
+        
+    }
+
+}
+
+function jogarTag5(){
+    if(tabela[5] == null){
+        if(vez){
+            tag5.innerHTML = 'X'
+            vez = false
+        }else{
+            let item = document.createElement('div')
+            item.className = "circle"
+            tag5.appendChild(item)
+            tabela[5] = 'O'
+            vez = true
+           
+        }
+        //verificaVitoria()
+    }else{
+        alert('Posição Preenchida')
+        
+    }
+
+}
+function jogarTag6(){
+    if(tabela[6] == null){
+        if(vez){
+            tag6.innerHTML = 'X'
+            vez = false
+        }else{
+            let item = document.createElement('div')
+            item.className = "circle"
+            tag6.appendChild(item)
+            tabela[6] = 'O'
+            vez = true
+           
+        }
+        //verificaVitoria()
+    }else{
+        alert('Posição Preenchida')
+        
+    }
+
+}
+function jogarTag7(){
+    if(tabela[7] == null){
+        if(vez){
+            tag7.innerHTML = 'X'
+            vez = false
+        }else{
+            let item = document.createElement('div')
+            item.className = "circle"
+            tag7.appendChild(item)
+            tabela[7] = 'O'
+            vez = true
+           
+        }
+        //verificaVitoria()
+    }else{
+        alert('Posição Preenchida')
+        
+    }
+
+}
+
+function jogarTag8(){
+    if(tabela[8] == null){
+        if(vez){
+            tag8.innerHTML = 'X'
+            vez = false
+        }else{
+            let item = document.createElement('div')
+            item.className = "circle"
+            tag8.appendChild(item)
+            tabela[8] = 'O'
+            vez = true
+           
+        }
+        //verificaVitoria()
+    }else{
+        alert('Posição Preenchida')
+        
+    }
+
+}
