@@ -1,6 +1,6 @@
 let jogadorO
 let jogadorX
-var vez = false
+let vez = false
 let tag0 = window.document.getElementById('tag0')
 let tag1 = window.document.getElementById('tag1')
 let tag2 = window.document.getElementById('tag2')
@@ -12,52 +12,24 @@ let tag7 = window.document.getElementById('tag7')
 let tag8 = window.document.getElementById('tag8')
 
 var tabela = []
-var vitoria = [
-    [0,1,2],
-    [3,4,5],
-    [6,7,8],
-    [0,4,8],
-    [2,4,6],
-    [0,3,6],
-    [1,4,7],
-    [2,5,8]
-    /*
-    0,1,2,
-    3,4,5,
-    6,7,8,
-    0,4,8,
-    2,4,6,
-    0,3,6,
-    1,4,7,
-    2,5,8
-    */
-]
-function verificaVitoria(){
-    for(var a=0; a<=8; a++){
-        if(vitoria[a][0] == vitoria[a][1] && vitoria[a][0] == vitoria[a][2]){
-            // let campeao = document.getElementById('campeao')
-            // campeao.innerHTML = 'campeao'
-            alert('campeao')
-        } 
-    }
-}
-
-
-function adiciona_O_NoArray(n){
-    for(var a = 0; a<=8; a++){
-        for(var b = 0; b<=8; b++){
-            if(vitoria[a][b] == n ){
-                vitoria[a][b] = 'O'
-            }
-        }
-    }    
-}
+//     /*
+//     0,1,2,
+//     3,4,5,
+//     6,7,8,
+//     0,4,8,
+//     2,4,6,
+//     0,3,6,
+//     1,4,7,
+//     2,5,8
+//     */
 
 
 function jogarTag0(){
     if(tabela[0] == null){
         if(vez){
+            $('#tag0').addClass('x')
             tag0.innerHTML = 'X'
+            tabela[0] = 'x'
             vez = false
        
         }else{
@@ -66,8 +38,6 @@ function jogarTag0(){
             tag0.appendChild(item)
             tabela[0] = 'O'
             vez = true   
-            console.log(vitoria)
-            adiciona_O_NoArray(0)
             //verificaVitoria()
                 
         }
@@ -80,7 +50,9 @@ function jogarTag1(){
     
     if(tabela[1] == null){
         if(vez){
+            $('#tag1').addClass('x')
             tag1.innerHTML = 'X'
+            tabela[1] = 'x'
             vez = false
         }else{
             let item = document.createElement('div')
@@ -88,8 +60,6 @@ function jogarTag1(){
             tag1.appendChild(item)
             tabela[1] = 'O'
             vez = true    
-            console.log(vitoria)
-            adiciona_O_NoArray(1)
             //verificaVitoria()
             
         }
@@ -102,7 +72,9 @@ function jogarTag1(){
 function jogarTag2(){
     if(tabela[2] == null){
         if(vez){
+            $('#tag2').addClass('x')
             tag2.innerHTML = 'X'
+            tabela[2] = 'x'
             vez = false
         }else{
             let item = document.createElement('div')
@@ -110,8 +82,6 @@ function jogarTag2(){
             tag2.appendChild(item)
             tabela[2] = 'O'
             vez = true
-            console.log(vitoria)
-            adiciona_O_NoArray(2)
             //verificaVitoria()    
         }
         
@@ -123,7 +93,9 @@ function jogarTag2(){
 function jogarTag3(){
     if(tabela[3] == null){
         if(vez){
+            $('#tag3').addClass('x')
             tag3.innerHTML = 'X'
+            tabela[3] = 'x'
             vez = false
         }else{
             let item = document.createElement('div')
@@ -144,7 +116,9 @@ function jogarTag3(){
 function jogarTag4(){
     if(tabela[4] == null){
         if(vez){
+            $('#tag4').addClass('x')
             tag4.innerHTML = 'X'
+            tabela[4] = 'x'
             vez = false
         }else{
             let item = document.createElement('div')
@@ -165,7 +139,9 @@ function jogarTag4(){
 function jogarTag5(){
     if(tabela[5] == null){
         if(vez){
+            $('#tag5').addClass('x')
             tag5.innerHTML = 'X'
+            tabela[5] = 'x'
             vez = false
         }else{
             let item = document.createElement('div')
@@ -185,7 +161,9 @@ function jogarTag5(){
 function jogarTag6(){
     if(tabela[6] == null){
         if(vez){
+            $('#tag6').addClass('x')
             tag6.innerHTML = 'X'
+            tabela[6] = 'x'
             vez = false
         }else{
             let item = document.createElement('div')
@@ -205,7 +183,9 @@ function jogarTag6(){
 function jogarTag7(){
     if(tabela[7] == null){
         if(vez){
+            $('#tag7').addClass('x')
             tag7.innerHTML = 'X'
+            tabela[7] = 'x'
             vez = false
         }else{
             let item = document.createElement('div')
@@ -226,7 +206,9 @@ function jogarTag7(){
 function jogarTag8(){
     if(tabela[8] == null){
         if(vez){
+            $('#tag8').addClass('x')
             tag8.innerHTML = 'X'
+            tabela[8] = 'x'
             vez = false
         }else{
             let item = document.createElement('div')
