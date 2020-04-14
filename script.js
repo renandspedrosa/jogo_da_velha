@@ -12,7 +12,6 @@ let tag7 = window.document.getElementById('tag7')
 let tag8 = window.document.getElementById('tag8')
 
 var tabela = []
-//     /*
 //     0,1,2,
 //     3,4,5,
 //     6,7,8,
@@ -21,8 +20,44 @@ var tabela = []
 //     0,3,6,
 //     1,4,7,
 //     2,5,8
-//     */
-
+function limpar(){
+    while(tabela.length){
+        tabela.pop()
+    }
+    for(i=0; i<=8; i++){
+        $('#tag'+i).empty();
+    }
+}
+function verificaVitoria(){
+    if(tabela[0] == tabela[1] && tabela[0] == tabela[2] && tabela[0] != null){
+        $('#titulo').text('vitoria do '+tabela[0])
+        limpar()
+    }else  if(tabela[3] == tabela[4] && tabela[3] == tabela[5] && tabela[3] != null){
+        $('#titulo').text('vitoria do '+tabela[3])
+        limpar()
+    }else  if(tabela[6] == tabela[7] && tabela[6] == tabela[8] && tabela[6] != null){
+        $('#titulo').text('vitoria do '+tabela[6])
+        limpar()
+    }else  if(tabela[0] == tabela[4] && tabela[0] == tabela[8] && tabela[0] != null){
+        $('#titulo').text('vitoria do '+tabela[0])
+        limpar()
+    }else  if(tabela[2] == tabela[4] && tabela[2] == tabela[6] && tabela[2] != null){
+        $('#titulo').text('vitoria do '+tabela[2])
+        limpar()
+    }else  if(tabela[0] == tabela[3] && tabela[0] == tabela[6] && tabela[0] != null){
+        $('#titulo').text('vitoria do '+tabela[0])
+        limpar()
+    }else  if(tabela[1] == tabela[4] && tabela[1] == tabela[7] && tabela[1] != null){
+        $('#titulo').text('vitoria do '+tabela[1])
+        limpar()
+    }else  if(tabela[2] == tabela[5] && tabela[2] == tabela[8] && tabela[2] != null){
+        $('#titulo').text('vitoria do '+tabela[2])
+        limpar()
+    }else if (tabela[0] != null && tabela[1] != null && tabela[2] != null && tabela[3] != null && tabela[4] != null && tabela[5] != null && tabela[6] != null && tabela[7] != null && tabela[8] != null){
+        $('#titulo').text('VELHA')
+        limpar()
+    }
+}
 
 function jogarTag0(){
     if(tabela[0] == null){
@@ -30,17 +65,15 @@ function jogarTag0(){
             $('#tag0').addClass('x')
             tag0.innerHTML = 'X'
             tabela[0] = 'x'
-            vez = false
-       
+            vez = false      
         }else{
             let item = document.createElement('div')
             item.className = "circle"
             tag0.appendChild(item)
             tabela[0] = 'O'
-            vez = true   
-            //verificaVitoria()
-                
+            vez = true         
         }
+        verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
@@ -54,16 +87,15 @@ function jogarTag1(){
             tag1.innerHTML = 'X'
             tabela[1] = 'x'
             vez = false
+           
         }else{
             let item = document.createElement('div')
             item.className = "circle"
             tag1.appendChild(item)
             tabela[1] = 'O'
             vez = true    
-            //verificaVitoria()
-            
         }
-        
+        verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
@@ -76,15 +108,16 @@ function jogarTag2(){
             tag2.innerHTML = 'X'
             tabela[2] = 'x'
             vez = false
+            
         }else{
             let item = document.createElement('div')
             item.className = "circle"
             tag2.appendChild(item)
             tabela[2] = 'O'
             vez = true
-            //verificaVitoria()    
+             
         }
-        
+        verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
@@ -105,14 +138,13 @@ function jogarTag3(){
             vez = true
            
         }
-        //verificaVitoria()
+        verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
     }
 
 }
-
 function jogarTag4(){
     if(tabela[4] == null){
         if(vez){
@@ -128,14 +160,13 @@ function jogarTag4(){
             vez = true
            
         }
-        //verificaVitoria()
+        verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
     }
 
 }
-
 function jogarTag5(){
     if(tabela[5] == null){
         if(vez){
@@ -151,7 +182,7 @@ function jogarTag5(){
             vez = true
            
         }
-        //verificaVitoria()
+        verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
@@ -173,7 +204,7 @@ function jogarTag6(){
             vez = true
            
         }
-        //verificaVitoria()
+        verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
@@ -195,14 +226,13 @@ function jogarTag7(){
             vez = true
            
         }
-        //verificaVitoria()
+        verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
     }
 
 }
-
 function jogarTag8(){
     if(tabela[8] == null){
         if(vez){
@@ -218,7 +248,7 @@ function jogarTag8(){
             vez = true
            
         }
-        //verificaVitoria()
+        verificaVitoria()
     }else{
         alert('Posição Preenchida')
         
