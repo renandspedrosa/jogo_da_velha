@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="style.css">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 
+     
+ 
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+</head>
+
+<body class="p-3 mb-2 bg-info text-white">
+<h1 id="titulo"> Jogo da Velha </h1>
+<div id="campeao"></div>
+<section class="shadow-sm p-3 mb-5 bg-white rounded">
+    <table  class="table">
+      <tbody>
+            <tr class="semTop">
+              <td class="meio" id="tag0" onclick="jogarTag0()"></td>
+              <td class="meio" id="tag1" onclick="jogarTag1()" ><div class="x y"></div></td>
+              <td id="tag2" onclick="jogarTag2()"></td>
+            </tr>
+            <tr class="bordaTop">
+              <td class="meio" onclick="jogarTag3()" id="tag3"></td>
+              <td class="meio" onclick="jogarTag4()" id="tag4"></td>
+              <td id="tag5" onclick="jogarTag5()"></td>
+            </tr>
+            <tr class="bordaTop">
+              <td class="meio"  onclick="jogarTag6()" id="tag6"></td>
+              <td class="meio"  onclick="jogarTag7()" id="tag7"></td>
+              <td id="tag8" onclick="jogarTag8()" ></td>
+            </tr>
+        </tbody>
+      </table>
+</section>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

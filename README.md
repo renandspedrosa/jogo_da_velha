@@ -1,2 +1,2 @@
 # jogo_da_velha
-jogo da velha feito com javascript
+jogo da velha usando Javascript

@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+}
+section{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+table{
+    table-layout: fixed;
+}
+td{
+    height: 155px;
+}
+.table td{
+    border-top:none;
+}
+.bordaTop{
+    border-top: 5px solid black;  
+}
+table{
+    table-layout: fixed;
+}
+.meio{
+    border-right: 5px solid black;
+}
+
+.circle{
+    border-radius:100%;
+    border:10px solid black;
+    width:85px;
+    height:85px;
+    margin: auto;
+
+}
+
+.x{
+    font-size: 64pt;
+    text-align: center;
+    font-weight: 600;
+}
